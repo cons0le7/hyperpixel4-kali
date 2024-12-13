@@ -32,8 +32,6 @@ sudo nano /boot/config.txt
 ```
 uncomment `dtoverlay=vc4-fkms-v3d`
 
-### Rotation on the fly
-
 You can use xrandr and xinput to rotate the display and touchscreen in turn.
 
 For HyperPixel Square, substitute the device name with "pointer:generic ft5x06 (11)".
