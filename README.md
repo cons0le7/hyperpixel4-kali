@@ -66,5 +66,7 @@ DISPLAY=:0.0 xrandr --output DSI-1 --rotate inverted
 DISPLAY=:0.0 xinput set-prop "pointer:Goodix Capacitive TouchScreen" "libinput Calibration Matrix" -1 0 1 0 -1 1 0 0 1
 ```
 
+# Troubleshooting: 
 
+I have removed troubleshooting process from this fork as the project only official supports RPi OS. Feel free to open an issue in this repo or reach out to me on instagram `@con5ole` . 
 
