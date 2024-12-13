@@ -11,6 +11,7 @@ git clone https://github.com/cons0le7/hyperpixel4-kali/tree/master
 ```
 Then: 
 ```
+cd ~/hyperpixel4-kali 
 chmod +x hyperpixel4-kali.sh
 ./hyperpixel4-kali.sh
 ```
@@ -23,29 +24,7 @@ When prompted, pick the combination of Pi and touchscreen that you're planning t
 
 Note: A HyperPixel4 setup for Pi 3B+ or earlier will not readily work if you move it over to a Pi 4, you should run this installer again to update the drivers.
 
-
-### Manual Installation
-
-Here's a list of active branches and which Pi/display combination they support:
-
-* [pi3](https://github.com/pimoroni/hyperpixel4/tree/pi3) - Pi 3B+ and earlier, HyperPixel4 Rectangular
-* [pi4](https://github.com/pimoroni/hyperpixel4/tree/pi4) - Pi 4 & Pi 400, HyperPixel4 Rectangular, use `hyperpixel4-rotate` to rotate once installed
-* [square](https://github.com/pimoroni/hyperpixel4/tree/square) - Pi 3B+ and earlier, HyperPixel4 Square (for boards manufactured 2020 and earlier)
-* [square-pi4](https://github.com/pimoroni/hyperpixel4/tree/square-pi4)  - Pi 4 & Pi 400, HyperPixel4 Square (for boards manufactured 2020 and earlier)
-* [square-2021](https://github.com/pimoroni/hyperpixel4/tree/square-2021) - Pi 3B+ and earlier, HyperPixel4 Square (for boards manufactured 2021 and later)
-* [square-pi4-2021](https://github.com/pimoroni/hyperpixel4/tree/square-pi4-2021)  - Pi 4 & Pi 400, HyperPixel4 Square (for boards manufactured 2021 and later)
-
-To clone a specific branch to your Pi, run:
-
-```
-git clone https://github.com/pimoroni/hyperpixel4 -b <branch name>
-```
-
-Then `cd hyperpixel4` and run `sudo ./install.sh` to install it.
-
 ## Rotation
-
-## Totally Manual Rotation
 
 :warning: for Xorg-based operating systems running on Pi 4 and Pi 400
 ```
