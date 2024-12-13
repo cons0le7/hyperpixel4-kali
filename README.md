@@ -22,9 +22,7 @@ curl -sSL https://get.pimoroni.com/hyperpixel4-legacy | bash
 
 When prompted, pick the combination of Pi and touchscreen that you're planning to use.
 
-## Rotation
-
-For Pi 4 and Pi 400.
+## Rotation (For Pi 4 and Pi 400.)
 
 Open config.txt in nano: 
 ```
