@@ -1,28 +1,18 @@
 # HyperPixel 4.0" Drivers
 
-HyperPixel 4.0 is an 800x480 or 720x720 pixel DPI display for Raspberry Pi, with optional capacitive touchscreen. The drivers/instructions in this repo are written for and tested with Raspberry Pi OS, and are not guaranteed to work with other operating systems.
-
-## Installing / Uninstalling (Bullseye / Linux Kernel 5.15 or later)
-
-Raspberry Pi OS Bullseye includes major changes to how DPI display drivers work. If you're using an image dated 04/04/2022 or later, it will come with Hyperpixel drivers baked in and you don't need to run the legacy installer. You can set up display and touch by adding a few lines to your boot/config.txt:
-
-[PSA: HyperPixel 4 (Square & Rectangular) on Raspberry Pi OS 2022-04-04](https://github.com/pimoroni/hyperpixel4/issues/177)
-
-⚠️Note that touch rotation commands will not currently work with on the square variant, and that the current kernel drivers will only work with newer square boards (marked Hyperpixel XP).
+HyperPixel 4.0 is an 800x480 or 720x720 pixel DPI display for Raspberry Pi, with optional capacitive touchscreen. 
+*This fork has been optimized for compatibility with Kali OS.* 
 
 ## Installing / Uninstalling (Legacy)
 
-This repository contains several branches for different combinations of Pi and HyperPixel4 boards.
-
-You should use our one-line installer to install HyperPixel4 Rectangular and Square:
-
 ```
-curl -sSL https://get.pimoroni.com/hyperpixel4 | bash
+curl -sSL https://get.pimoroni.com/hyperpixel4-legacy | bash
 ```
 
 When prompted, pick the combination of Pi and touchscreen that you're planning to use.
 
 Note: A HyperPixel4 setup for Pi 3B+ or earlier will not readily work if you move it over to a Pi 4, you should run this installer again to update the drivers.
+
 
 ### Manual Installation
 
@@ -48,10 +38,10 @@ Then `cd hyperpixel4` and run `sudo ./install.sh` to install it.
 ## Totally Manual Rotation
 
 :warning: for Xorg-based operating systems running on Pi 4 and Pi 400
-:warning: must have `dtoverlay=vc4-fkms-v3d` in `/boot/config.txt`
 ```
 sudo nano /boot/config.txt
 ```
+uncomment `dtoverlay=vc4-fkms-v3d`
 
 ### Rotation on the fly
 
@@ -87,37 +77,6 @@ DISPLAY=:0.0 xrandr --output DSI-1 --rotate inverted
 DISPLAY=:0.0 xinput set-prop "pointer:Goodix Capacitive TouchScreen" "libinput Calibration Matrix" -1 0 1 0 -1 1 0 0 1
 ```
 
-### Persisting Rotation
-
-Add the relevant settings from above into `/usr/share/X11/xorg.conf.d/88-hyperpixel4.conf`.
-
-You will need the device name:
-
-* "Goodix Capacitive TouchScreen" for HyperPixel 4 Rectangular
-* "generic ft5x06 (11)" for HyperPixel 4 Square
-
-And the 9 numbers from the "Calibration Matrix", eg: `-1 0 1 0 -1 1 0 0 1`
-
-Plus the rotation direction for the monitor.
-
-```
-Section "InputClass"
-	Identifier "libinput HyperPixel4 Rectangular"
-	MatchProduct "Goodix Capacitive TouchScreen"
-	Option "CalibrationMatrix" "0 -1 1 1 0 0 0 0 1"
-EndSection
-
-Section "Monitor"
-	Identifier "DSI-1"
-	Option "Rotate" "left"
-EndSection
-```
-
-If you're using lightdm (the default window manager on Raspberry Pi OS) and it's calling `/usr/share/dispsetup.sh` you'll need to either disable that call in `/etc/lightdm/lightdm.conf` or change `dispsetup.sh` to just `exit 0`. Removing `dispsetup.sh` will break lightdm and boot you to a black screen of death.
-
-* :warning: Running "Screen Configuration" will re-create `dispsetup.sh` and override your Xorg settings
-* :warning: Removing `dispsetup.sh` from `/etc/lightdm/lightdm.conf` will prevent "Screen Configuration" settings for persisting.
-* You should probably use `hyperpixel4-rotate` unless you really know what you're doing!
 
 ## Troubleshooting
 
