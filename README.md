@@ -3,7 +3,7 @@
 HyperPixel 4.0 is an 800x480 or 720x720 pixel DPI display for Raspberry Pi, with optional capacitive touchscreen. 
 *This fork has been optimized for compatibility with Kali OS.* 
 
-## Installing / Uninstalling (Legacy)
+## Installing / Uninstalling 
 
 clone this repo: 
 ```
