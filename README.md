@@ -45,7 +45,6 @@ sudo reboot
 ```
 If done correctly the screen should be working and saved in the orientation you chose! 
 
-## Troubleshooting: 
-
-I have removed troubleshooting process from this fork as the project only official supports RPi OS. Feel free to open an issue in this repo or reach out to me on instagram `@con5ole` . 
+# Issues: 
+Feel free to open an issue in this repo or reach out to me on instagram `@con5ole` . 
 
