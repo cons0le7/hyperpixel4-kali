@@ -30,11 +30,7 @@ sudo nano /boot/config.txt
 ```
 uncomment `dtoverlay=vc4-fkms-v3d`
 
-You can use xrandr and xinput to rotate the display and touchscreen in turn.
-
-For HyperPixel Square, substitute the device name with "pointer:generic ft5x06 (11)".
-
-Set screen orientation by uncommenting your selection: 
+Set screen orientation by uncommenting your selection (For HyperPixel Square, substitute the device name with `pointer:generic ft5x06 (11)`): 
 ```
 cd ~/hyperpixel4-kali
 sudo nano rotate.sh 
