@@ -22,8 +22,6 @@ curl -sSL https://get.pimoroni.com/hyperpixel4-legacy | bash
 
 When prompted, pick the combination of Pi and touchscreen that you're planning to use.
 
-Note: A HyperPixel4 setup for Pi 3B+ or earlier will not readily work if you move it over to a Pi 4, you should run this installer again to update the drivers.
-
 ## Rotation
 
 For Pi 4 and Pi 400.
