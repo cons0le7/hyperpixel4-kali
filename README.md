@@ -67,19 +67,4 @@ DISPLAY=:0.0 xinput set-prop "pointer:Goodix Capacitive TouchScreen" "libinput C
 ```
 
 
-## Troubleshooting
-
-Where possible we are collecting known FAQs under the `notice` label in our issue tracker.
-
-[`Notice` Issue Tracker](https://github.com/pimoroni/hyperpixel4/issues?q=is%3Aissue+label%3Anotice+)
-
-If your issue is not covered by one of these provided by our team and community 
-then we ask you to provide some debugging information using the following oneliner:
-
-```bash
-curl -sSL https://raw.githubusercontent.com/pimoroni/hyperpixel4/master/hyperpixel4-debug.sh | bash
-```
-
-Then [file a bug report](https://github.com/pimoroni/hyperpixel4/issues/new/choose).
-
 
