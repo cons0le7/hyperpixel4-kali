@@ -5,7 +5,7 @@ HyperPixel 4.0 is an 800x480 or 720x720 pixel DPI display for Raspberry Pi, with
 
 ## Installing 
 
-clone this repo: 
+Clone this repo: 
 ```
 git clone https://github.com/cons0le7/hyperpixel4-kali
 ```
