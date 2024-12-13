@@ -9,11 +9,12 @@ clone this repo:
 ```
 git clone https://github.com/cons0le7/hyperpixel4-kali/tree/master
 ```
-then: 
+Then: 
 ```
-chmod +x 
+chmod +x hyperpixel4-kali.sh
+./hyperpixel4-kali.sh
 ```
-
+Install driver: 
 ```
 curl -sSL https://get.pimoroni.com/hyperpixel4-legacy | bash
 ```
