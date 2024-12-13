@@ -1,7 +1,7 @@
 # HyperPixel 4.0 Drivers for Kali
 
 HyperPixel 4.0 is an 800x480 or 720x720 pixel DPI display for Raspberry Pi, with optional capacitive touchscreen. 
-*This fork has been optimized for compatibility with Kali OS.* 
+*This fork has been optimized for compatibility with Kali OS. I got this working with 64 bit Kali os for Raspberry Pi 4b. I am unsure if this will work for any other model or OS version. Any feedback will be greatly appreciated* 
 
 ## Installing 
 
