@@ -14,6 +14,8 @@ Then:
 ```
 cd ~/hyperpixel4-kali 
 chmod +x hyperpixel4-kali.sh
+chmod +x rotate.sh
+chmod +x keep_rotate.sh
 ./hyperpixel4-kali.sh
 ```
 Install driver: 
