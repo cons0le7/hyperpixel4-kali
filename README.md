@@ -14,7 +14,7 @@ Paste into terminal:
 ```
 cd ~/hyperpixel4-kali 
 chmod +x hyperpixel4-kali.sh
-chmod +x rotate.sh
+chmod +x rotation.sh
 chmod +x keep_rotate.sh
 ./hyperpixel4-kali.sh
 curl -sSL https://get.pimoroni.com/hyperpixel4-legacy | bash
