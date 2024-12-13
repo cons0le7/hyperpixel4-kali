@@ -34,33 +34,20 @@ You can use xrandr and xinput to rotate the display and touchscreen in turn.
 
 For HyperPixel Square, substitute the device name with "pointer:generic ft5x06 (11)".
 
-#### Left
-
+Set screen orientation by uncommenting your selection: 
 ```
-DISPLAY=:0.0 xrandr --output DSI-1 --rotate left
-DISPLAY=:0.0 xinput set-prop "pointer:Goodix Capacitive TouchScreen" "libinput Calibration Matrix" 0 -1 1 1 0 0 0 0 1
+cd ~/hyperpixel4-kali
+sudo nano rotate.sh 
 ```
-
-#### Right
-
+After saving you can create a service which ensures your screen remains in selected orientation at startup: 
 ```
-DISPLAY=:0.0 xrandr --output DSI-1 --rotate right
-DISPLAY=:0.0 xinput set-prop "pointer:Goodix Capacitive TouchScreen" "libinput Calibration Matrix" 0 1 0 -1 0 1 0 0 1
+./keep_rotate.sh
 ```
-
-#### Normal
-
+Reboot: 
 ```
-DISPLAY=:0.0 xrandr --output DSI-1 --rotate normal
-DISPLAY=:0.0 xinput set-prop "pointer:Goodix Capacitive TouchScreen" "libinput Calibration Matrix" 1 0 0 0 1 0 0 0 1
+sudo reboot
 ```
-
-#### Inverted
-
-```
-DISPLAY=:0.0 xrandr --output DSI-1 --rotate inverted
-DISPLAY=:0.0 xinput set-prop "pointer:Goodix Capacitive TouchScreen" "libinput Calibration Matrix" -1 0 1 0 -1 1 0 0 1
-```
+If done correctly the screen should be working and saved in the orientation you chose! 
 
 ## Troubleshooting: 
 
