@@ -26,7 +26,9 @@ Note: A HyperPixel4 setup for Pi 3B+ or earlier will not readily work if you mov
 
 ## Rotation
 
-for Pi 4 and Pi 400
+For Pi 4 and Pi 400.
+
+Open config.txt in nano: 
 ```
 sudo nano /boot/config.txt
 ```
