@@ -1,5 +1,5 @@
 
-# Uncomment the 2 lines below your chosen layout.
+# Uncomment the *2 lines below* your chosen layout.
 
 
 #######################
