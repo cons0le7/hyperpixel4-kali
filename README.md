@@ -30,7 +30,7 @@ sudo nano /boot/config.txt
 ```
 uncomment `dtoverlay=vc4-fkms-v3d`
 
-Set screen orientation by uncommenting your selection (For HyperPixel Square, substitute the device name with `pointer:generic ft5x06 (11)`): 
+Set screen orientation by uncommenting your selection: 
 ```
 cd ~/hyperpixel4-kali
 sudo nano rotation.sh 
