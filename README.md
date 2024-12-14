@@ -37,7 +37,7 @@ sudo nano rotation.sh
 ```
 
 ### To make rotation settings stay after reboot / power off: 
-- tap the blue kali icon at the top right of desktop 
+- tap the blue kali icon at the top left of desktop 
 - Settings > Settings Manager > Session and Startup > Application Autostart > Add 
 - Set a name and description.
 - For command: 
