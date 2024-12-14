@@ -33,6 +33,8 @@ sudo nano /boot/config.txt
 ```
 uncomment `dtoverlay=vc4-fkms-v3d`
 
+save and exit. 
+
 Set screen orientation by uncommenting your selection: 
 ```
 cd ~/hyperpixel4-kali
