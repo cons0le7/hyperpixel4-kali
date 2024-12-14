@@ -49,6 +49,22 @@ sudo nano rotation.sh
 You can now do `sudo reboot` and login to make sure changes take affect. 
 If done correctly the screen should be working and saved in the orientation you chose.
 
+
+## On-the-fly rotation: 
+
+The 'square-rotos' and 'rectangular-rotos' folders in this repo contain individual .sh files which can be made executable: 
+
+- Rectangular:
+```
+chmod +x ~/hyperpixel4-kali/rectangular-rotos/*.sh
+```
+
+- Square:
+```
+chmod +x ~/hyperpixel4-kali/square-rotos/*.sh
+```
+After being made executable, you can double click any of them and execute in terminal for on-the-fly rotation. You can move these files anywhere youd like or make desktop shortcuts if you choose to do so.  
+
 # Issues: 
 Feel free to open an issue in this repo or reach out to me on instagram `@con5ole` . 
 
