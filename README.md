@@ -47,7 +47,7 @@ sudo nano rotation.sh
 - Set trigger to ‘on login’ 
 
 You can now do `sudo reboot` and login to make sure changes take affect. 
-If done correctly the screen should be working and saved in the orientation you chose! 
+If done correctly the screen should be working and saved in the orientation you chose.
 
 # Issues: 
 Feel free to open an issue in this repo or reach out to me on instagram `@con5ole` . 
