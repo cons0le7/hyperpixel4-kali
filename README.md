@@ -36,9 +36,7 @@ cd ~/hyperpixel4-kali
 sudo nano rotation.sh 
 ```
 
-## You can make the rotation setting autostart at login by doing the following: 
-
-### Navigate to startup settings: 
+### To make rotation settings autostart at login: 
 - tap the blue kali icon at the top right of desktop 
 - Settings > Settings Manager > Session and Startup > Application Autostart > Add 
 - Set a name and description.
