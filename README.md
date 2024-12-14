@@ -35,14 +35,20 @@ Set screen orientation by uncommenting your selection:
 cd ~/hyperpixel4-kali
 sudo nano rotation.sh 
 ```
-After saving you can create a service which ensures your screen remains in selected orientation at startup: 
+
+## You can make the rotation setting autostart at login by doing the following: 
+
+### Navigate to startup settings: 
+- tap the blue kali icon at the top right of desktop 
+- Settings > Settings Manager > Session and Startup > Application Autostart > Add 
+- Set a name and description.
+- For command: 
 ```
-./keep_rotate.sh
+/home/kali/hyperpixel4-kali/rotation.sh 
 ```
-Reboot: 
-```
-sudo reboot
-```
+- Set trigger to ‘on login’ 
+
+You can now do `sudo reboot` and login to make sure changes take affect. 
 If done correctly the screen should be working and saved in the orientation you chose! 
 
 # Issues: 
