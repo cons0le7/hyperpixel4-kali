@@ -35,7 +35,7 @@ uncomment `dtoverlay=vc4-fkms-v3d`
 
 save and exit. 
 
-Set screen orientation by uncommenting your selection: 
+Set screen orientation by uncommenting your selection in 'rotation.sh': 
 ```
 cd ~/hyperpixel4-kali
 sudo nano rotation.sh 
