@@ -6,7 +6,7 @@ instructions = """
 To make rotation settings stay after reboot / power off:
 
 [1] Tap the blue kali icon at the top left of desktop
-[2]Navigate to: Settings > Settings Manager > Session and Startup > Application Autostart
+[2] Navigate to: Settings > Settings Manager > Session and Startup > Application Autostart
 [3] Click "Add"
 [4] Set a name and description.
 [5] Set trigger to ‘on login’
@@ -160,7 +160,7 @@ x-----------------------------------------------------x
 | [2] | Update Config                                 |
 | [3] | Rotate Display                                |
 | [4] | Setup Persistence                             |
-| [5] | Exit.                                         |
+| [5] | Exit                                          |
 |-----------------------------------------------------|
 |---[https://github.com/cons0le7/hyperpixel4-kali]----|
 x-----------------------------------------------------x
