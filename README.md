@@ -29,11 +29,11 @@ This can be accessed any time for on the fly rotation. you can also use the `rot
 ### Setup Persistence: 
 This will give instructions for adding display settings to autostart and provide the proper file path to enter based on your display type and preferred orientation.
 
-
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 *Nothing beyond this point is necessarry if you chose to use the easy install.*
 
-
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 ## Manual installation:  
 
