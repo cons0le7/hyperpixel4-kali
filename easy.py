@@ -106,8 +106,8 @@ Select display type:
 def install():
     commands = [
         "cd /home/kali/hyperpixel4-kali && chmod +x hyperpixel4-kali.sh && chmod +x rotation.sh",
-        "chmod +x ~/hyperpixel4-kali/rectangular-rotos/*.sh",
-        "chmod +x ~/hyperpixel4-kali/square-rotos/*.sh",
+        "chmod +x /rectangular-rotos/*.sh",
+        "chmod +x /square-rotos/*.sh",
         "./hyperpixel4-kali.sh",
         "curl -sSL https://get.pimoroni.com/hyperpixel4-legacy | bash"
     ]
