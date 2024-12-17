@@ -50,7 +50,7 @@ chmod +x rotation.sh
 curl -sSL https://get.pimoroni.com/hyperpixel4-legacy | bash
 ```
 
-When prompted, pick the combination of Pi and touchscreen that you're planning to use.
+When prompted, pick the combination of Pi and screen that you're planning to use.
 
 ## Rotation (For Pi 4 and Pi 400)
 
