@@ -18,7 +18,20 @@ Paste into terminal:
 cd hyperpixel4-kali
 python3 easy.py 
 ```
+You will be presented with 4 options: 
+- Install
+- Update Config
+- Rotate Display 
+- Setup Persistence 
 
+### Install 
+Initial setup of driver. Follow the prompts during install to ensure proper setup.
+### Update Config 
+Necessary for rotation to work. This adds `dtoverlay=vc4-fkms-v3d` in /boot/config.txt 
+### Rotate Display 
+This can be accessed any time for on the fly rotation. you can also use the `rotate.py` file as a stand-alone rotation tool. 
+### Setup Persistence: 
+This will give instructions for adding display settings to autostart and provide the proper file path to enter based on your display type and preferred orientation.
 
 ## Manual installation:  
 
