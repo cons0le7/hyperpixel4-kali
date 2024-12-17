@@ -36,19 +36,19 @@ Select Orientation:
     if rectangle_roto == 1:
         print(instructions)
         print(rect_left)
-        print("sudo reboot after saving and log in to ensure changes take effect.")
+        print("\nsudo reboot after saving and log in to ensure changes take effect.")
     elif rectangle_roto == 2:
         print(instructions)
         print(rect_right)
-        print("sudo reboot after saving and log in to ensure changes take effect.")
+        print("\nsudo reboot after saving and log in to ensure changes take effect.")
     elif rectangle_roto == 3:
         print(instructions)
         print(rect_default)
-        print("sudo reboot after saving and log in to ensure changes take effect.")
+        print("\nsudo reboot after saving and log in to ensure changes take effect.")
     elif rectangle_roto == 4:
         print(instructions)
         print(rect_inverted)
-        print("sudo reboot after saving and log in to ensure changes take effect.")
+        print("\nsudo reboot after saving and log in to ensure changes take effect.")
     elif rectangle_roto == 5:
         sys.exit()
     else:
@@ -105,10 +105,10 @@ Select display type:
 
 def install():
     commands = [
-        "cd ~/hyperpixel4-kali && chmod +x hyperpixel4-kali.sh && chmod +x rotation.sh",
-        "chmod +x ~/hyperpixel4-kali/rectangular-rotos/*.sh",
-        "chmod +x ~/hyperpixel4-kali/square-rotos/*.sh",
-        "~/hyperpixel4-kali/hyperpixel4-kali.sh",
+        "cd /home/kali/hyperpixel4-kali && chmod +x hyperpixel4-kali.sh && chmod +x rotation.sh",
+        "chmod +x ~/rectangular-rotos/*.sh",
+        "chmod +x ~/square-rotos/*.sh",
+        "./hyperpixel4-kali.sh",
         "curl -sSL https://get.pimoroni.com/hyperpixel4-legacy | bash"
     ]
 
