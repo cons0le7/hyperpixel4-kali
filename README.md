@@ -19,10 +19,6 @@ cd hyperpixel4-kali
 python3 easy.py 
 ```
 You will be presented with 4 options: 
-- Install
-- Update Config
-- Rotate Display 
-- Setup Persistence 
 
 ### Install 
 Initial setup of driver. Follow the prompts during install to ensure proper setup.
