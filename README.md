@@ -9,6 +9,9 @@ https://github.com/pimoroni/hyperpixel/issues/52
 
 ![IMG_2890](https://github.com/user-attachments/assets/f9f9ada8-70e5-4361-8e42-eeb43693cb72)
 
+## Before installation: 
+It is recommended to backup your config in `boot/config.txt` after flashing Kali to your micro SD. In the case you end up with a blank screen or get stuck on the rainbow screen when rebooting after a failed install, you can try replacing the config file with the original and this may save you from having to flash the OS again. 
+
 ## Easy install:
 Clone this repo: 
 ```
