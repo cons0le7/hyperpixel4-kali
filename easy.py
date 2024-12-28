@@ -1,8 +1,8 @@
 import os
-import sys
-import subprocess
+import sys 
+import subprocess 
 
-instructions = """
+instructions = """ 
 To make rotation settings stay after reboot / power off:
 
 [1] Tap the blue kali icon at the top left of desktop
@@ -33,25 +33,25 @@ Select Orientation:
 [4] Inverted 
 [5] Exit 
 """))
-    if rectangle_roto == 1:
-        print(instructions)
+    if rectangle_roto == 1: 
+        print(instructions) 
         print(rect_left)
-        print("\nsudo reboot after saving and log in to ensure changes take effect.")
-    elif rectangle_roto == 2:
-        print(instructions)
+        print("sudo reboot after saving and log in to ensure changes take effect.")
+    elif rectangle_roto == 2: 
+        print(instructions) 
         print(rect_right)
-        print("\nsudo reboot after saving and log in to ensure changes take effect.")
-    elif rectangle_roto == 3:
-        print(instructions)
+        print("sudo reboot after saving and log in to ensure changes take effect.")
+    elif rectangle_roto == 3: 
+        print(instructions) 
         print(rect_default)
-        print("\nsudo reboot after saving and log in to ensure changes take effect.")
-    elif rectangle_roto == 4:
-        print(instructions)
+        print("sudo reboot after saving and log in to ensure changes take effect.")
+    elif rectangle_roto == 4: 
+        print(instructions) 
         print(rect_inverted)
-        print("\nsudo reboot after saving and log in to ensure changes take effect.")
-    elif rectangle_roto == 5:
+        print("sudo reboot after saving and log in to ensure changes take effect.")
+    elif rectangle_roto == 5: 
         sys.exit()
-    else:
+    else: 
         print("Invalid input. Enter a number 1-5.")
         persist_rectangle()
 
@@ -64,51 +64,76 @@ Select Orientation:
 [4] Inverted 
 [5] Exit 
 """))
-    if square_roto == 1:
-        print(instructions)
+    if square_roto == 1: 
+        print(instructions) 
         print(square_left)
         print("sudo reboot after saving and log in to ensure changes take effect.")
-    elif square_roto == 2:
-        print(instructions)
+    elif square_roto == 2: 
+        print(instructions) 
         print(square_right)
         print("sudo reboot after saving and log in to ensure changes take effect.")
-    elif square_roto == 3:
-        print(instructions)
+    elif square_roto == 3: 
+        print(instructions) 
         print(square_default)
         print("sudo reboot after saving and log in to ensure changes take effect.")
-    elif square_roto == 4:
-        print(instructions)
+    elif square_roto == 4: 
+        print(instructions) 
         print(square_inverted)
         print("sudo reboot after saving and log in to ensure changes take effect.")
-    elif square_roto == 5:
+    elif square_roto == 5: 
         sys.exit()
-    else:
+    else: 
         print("Invalid input. Enter a number 1-5.")
         persist_square()
 
+def persist_select(): 
+    persist_choice = int(input("""
+    Select option 1 for automatic setup. 
+    If there are any issues with this try option 2. 
+   
+     [1] Automatic Setup
+    [2] Manual Setup 
+    [3] Cancel
+    """))
+    if persist_choice == 1: 
+        try:
+            subprocess.run("sudo python3 persist.py", shell=True)
+            sys.exit(0)
+        except Exception as e:
+            print(f"An error occurred: {e}")
+            sys.exit(1)
+    elif persist_choice == 2: 
+        persist_menu() 
+    elif persist_choice == 3: 
+        menu()
+    else: 
+        print("Invalid input. Enter a number 1 - 3.") 
+        persist_select()
+        
 def persist_menu():
     display = int(input("""
 Select display type: 
 [1] Rectangular 
 [2] Square 
 [3] Exit
-"""))
+""")) 
     if display == 1:
         persist_rectangle()
-    elif display == 2:
-        persist_square()
-    elif display == 3:
+    elif display == 2: 
+        persist_square() 
+    elif display == 3: 
         sys.exit()
     else:
         print("Invalid input. Enter a number 1-3.")
         persist_menu()
+    
 
 def install():
     commands = [
-        "cd /home/kali/hyperpixel4-kali && chmod +x hyperpixel4-kali.sh && chmod +x rotation.sh",
-        "chmod +x /home/kali/hyperpixel4-kali/rectangular-rotos/*.sh",
-        "chmod +x /home/kali/hyperpixel4-kali/square-rotos/*.sh",
-        "./hyperpixel4-kali.sh",
+        "cd ~/hyperpixel4-kali && chmod +x hyperpixel4-kali.sh && chmod +x rotation.sh",
+        "chmod +x ~/hyperpixel4-kali/rectangular-rotos/*.sh",
+        "chmod +x ~/hyperpixel4-kali/square-rotos/*.sh",
+        "~/hyperpixel4-kali/hyperpixel4-kali.sh",
         "curl -sSL https://get.pimoroni.com/hyperpixel4-legacy | bash"
     ]
 
@@ -118,7 +143,7 @@ def install():
         print(result.stdout)
         if result.stderr:
             print(f"Error: {result.stderr}")
-
+    
 def edit_config():
     file = '/boot/config.txt'
     append = 'dtoverlay=vc4-fkms-v3d\n'
@@ -139,8 +164,10 @@ def edit_config():
         print(f"The file '{file}' does not exist.")
     except Exception as e:
         print(f"An error occurred: {e}")
+    
 
-def menu():
+
+def menu(): 
     print("""                                                                                
 ██╗  ██╗██████╗ ██╗  ██╗      ██╗  ██╗ █████╗ ██╗     ██╗
 ██║  ██║██╔══██╗██║  ██║      ██║ ██╔╝██╔══██╗██║     ██║
@@ -162,18 +189,19 @@ x-----------------------------------------------------x
 |---[https://github.com/cons0le7/hyperpixel4-kali]----|
 x-----------------------------------------------------x
 """))
-    if choice == 1:
+    if choice == 1: 
         install()
     elif choice == 2:
         edit_config()
-    elif choice == 3:
+    elif choice == 3: 
         import rotate
-    elif choice == 4:
-        persist_menu()
-    elif choice == 5:
-        sys.exit()
-    else:
-        print("Invalid input. Enter a number 1-5.")
+    elif choice == 4: 
+        persist_select()
+    elif choice == 5: 
+        sys.exit() 
+    else: 
+        print("Invalid input. Enter a number 1-3.")
         menu()
-
 menu()
+    
+    
