@@ -91,7 +91,7 @@ def persist_select():
     Select option 1 for automatic setup. 
     If there are any issues with this try option 2. 
    
-     [1] Automatic Setup
+    [1] Automatic Setup
     [2] Manual Setup 
     [3] Cancel
     """))
