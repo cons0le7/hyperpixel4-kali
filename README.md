@@ -2,7 +2,7 @@
 
 HyperPixel 4.0 is an 800x480 or 720x720 pixel DPI display for Raspberry Pi, with optional capacitive touchscreen. 
 
-*This fork has been created to simplify setup of HyperPixel 4.0 screen with kali OS. I've got this working with 64 bit Kali ARM 2024.3 for Raspberry Pi 4b with rectangular screen (kali-linux-2024.3-raspberry-pi-arm64.img.xz) I am unsure if this will work for any other model or OS version. Any feedback / bug reports would be greatly appreciated.*  
+*This fork has been created to simplify setup of HyperPixel 4.0 screen with kali OS. I've got this working with 64 bit Kali ARM 2024.3 for Raspberry Pi 4b with rectangular screen (kali-linux-2024.3-raspberry-pi-arm64.img.xz) I have not been able to test this with any other RPi model or OS version. Any feedback / bug reports would be greatly appreciated.*  
 
 I have got this working thanks to [Massi361](https://github.com/Massi361)'s solution posted here: 
 https://github.com/pimoroni/hyperpixel/issues/52
