@@ -112,7 +112,7 @@ orientations = {
 }
 
 def persist():
-    print("Select display type:")
+    print("\nSelect display type:")
     print("[1] Rectangle")
     print("[2] Square")
     
@@ -123,20 +123,20 @@ def persist():
     elif display_type_choice == '2':
         display_type = 'square'
     else:
-        print("Invalid display type. Please choose either '1' for square or '2' for rectangle.")
+        print("\nInvalid display type. Please choose either '1' for square or '2' for rectangle.")
         return
 
-    print("Select orientation:")
+    print("\nSelect orientation:")
     for num, (key, _) in orientations.items():
         print(f"[{num}] {key.capitalize()}")
     
     try:
         orientation_choice = int(input("Enter your choice (1-4): ").strip())
         if orientation_choice not in orientations:
-            print("Invalid orientation. Please choose a number between 1 and 4.")
+            print("\nInvalid orientation. Please choose a number between 1 and 4.")
             return
     except ValueError:
-        print("Invalid input. Please enter a number.")
+        print("\nInvalid input. Please enter a number.")
         return
 
     orientation, _ = orientations[orientation_choice]
@@ -166,10 +166,10 @@ def persist():
     try:
         with open(config_file_path, 'w') as config_file:
             config_file.write(config)
-        print(f"Configuration written to {config_file_path}")
+        print(f"\nConfiguration written to {config_file_path}")
     except PermissionError:
-        print("Permission denied. Please run the script as root or with sudo.")
+        print("\nPermission denied. Please run the script as root or with sudo.")
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f"\nAn error occurred: {e}")
 
 persist()
