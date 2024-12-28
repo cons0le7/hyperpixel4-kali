@@ -31,7 +31,8 @@ Necessary for rotation to work. This adds `dtoverlay=vc4-fkms-v3d` in /boot/conf
 ### Rotate Display 
 This can be accessed any time for on the fly rotation. you can also use the `rotate.py` file as a stand-alone rotation tool. 
 ### Setup Persistence: 
-This has been updated to automatically save X11 config settings based on your selection of display type and orientation. This will ensure your display orientation remains as selected even after rebooting. 
+This has been updated to automatically save X11 config settings in `/usr/share/X11/xorg.conf.d/88-hyperpixel4.conf` based on your selection of display type and orientation.
+This will ensure your display orientation remains as selected even after rebooting. 
 I left the legacy option with instructions for setting up manually in autostart if for some reason you prefer this route or have any issues with the auto-config not working. 
 
 _________________________________________
