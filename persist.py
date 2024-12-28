@@ -1,4 +1,6 @@
 import os
+import sys 
+import subprocess
 
 rectangle_left = """
 Section "InputClass"
@@ -111,6 +113,21 @@ orientations = {
     4: ('inverted', 'inverted')
 }
 
+
+def reboot_system(): 
+    reboot_response = input("Would you like to reboot now? (y/n): ")    
+    if reboot_response.lower() == "y": 
+        try:
+            subprocess.run(['sudo', 'reboot'], check=True)
+        except subprocess.CalledProcessError as e:
+            print(f"An error occurred: {e}")
+            sys.exit(1)
+    elif reboot_response.lower() == "n": 
+        sys.exit()
+    else: 
+        print("Invalid input. Exiting...")
+        sys.exit()
+        
 def persist():
     print("\nSelect display type:")
     print("[1] Rectangle")
@@ -167,6 +184,7 @@ def persist():
         with open(config_file_path, 'w') as config_file:
             config_file.write(config)
         print(f"\nConfiguration written to {config_file_path}")
+        reboot_system()
     except PermissionError:
         print("\nPermission denied. Please run the script as root or with sudo.")
     except Exception as e:
