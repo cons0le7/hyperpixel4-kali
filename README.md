@@ -105,5 +105,5 @@ chmod +x ~/hyperpixel4-kali/square-rotos/*.sh
 After being made executable, you can double click any of them and execute in terminal for on-the-fly rotation. You can move these files anywhere or make desktop shortcuts if you'd like.
 
 # Issues: 
-Feel free to open an issue in this repo or reach out to me on instagram `@con5ole` . 
+Feel free to open an issue in this repo or reach out to me on instagram `@con5ole` 
 
